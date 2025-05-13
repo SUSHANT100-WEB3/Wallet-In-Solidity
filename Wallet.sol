@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
-//Transaction - from,to,timings,amount
-contract SimpleWallet {
+
+contract Wallet {
 
 
     struct Transaction{
@@ -160,10 +160,8 @@ contract SimpleWallet {
       return transactionHistory;
     }
 
-
     function emergencyWithdrawl() external {
       require(stop==true,"Emergency not declared");
       payable(owner).transfer(address(this).balance);
     }
-
 }
