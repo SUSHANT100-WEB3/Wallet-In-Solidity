@@ -166,7 +166,4 @@ contract SimpleWallet {
       payable(owner).transfer(address(this).balance);
     }
 
-
-
-
 }
